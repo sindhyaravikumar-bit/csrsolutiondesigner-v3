@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Cybernetyx CSR Solution Designer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/styles.css">
+  <script src="_ds/coinbase-design-system-6f4408c2-7f72-4c98-b042-64df7e609ded/_ds_bundle.js"></script>
+  <style>
+    html,body{margin:0;padding:0;background:#fff;color:#0a0b0d;font-family:var(--font-sans);-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+    *{box-sizing:border-box}
+    img{max-width:100%}
+    a{color:var(--color-primary);text-decoration:none}
+    a:hover{opacity:.8}
+    @page{size:A4;margin:10mm}
+    @media print{
+      [data-noprint]{display:none !important}
+      html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;background:#fff}
+      [data-report]{zoom:.64}
+      [data-band]>div{padding-top:40px !important;padding-bottom:40px !important;gap:28px !important}
+      [data-band]{break-inside:auto}
+      h1,h2{break-after:avoid}
+    }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--color-canvas)">
+
+  <header data-noprint="" style="position:sticky;top:0;z-index:20;background:#ffffff;border-bottom:1px solid var(--color-hairline)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px clamp(16px,4vw,24px);min-height:68px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="width:12px;height:12px;border-radius:50%;background:var(--color-primary)"></span>
+          <span style="font-size:20px;font-weight:600;letter-spacing:-0.4px;color:var(--color-ink)">Cybernetyx</span>
+        </div>
+        <span style="font-size:14px;font-weight:500;color:var(--color-body)">CSR Solution Designer</span>
+      </div>
+      <nav style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <a href="#design" style="font-size:14px;font-weight:500;color:var(--color-ink)">Design</a>
+        <a href="#proposal" onClick="{{ goReport }}" style="font-size:14px;font-weight:500;color:var(--color-ink)">Proposal</a>
+        <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Button" onClick="{{ downloadPdf }}" hint-size="150px,44px">Download PDF</x-import>
+      </nav>
+    </div>
+  </header>
+
+  <section id="design" data-noprint="" data-screen-label="Designer" style="background:var(--color-surface-dark);color:var(--color-on-dark)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px) clamp(96px,10vw,128px);display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex"><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Badge" tone="on-dark" hint-size="220px,30px">CSR education · Solution designer</x-import></div>
+      <h1 style="margin:0;max-width:880px;font-family:var(--font-display);font-size:clamp(38px,6.5vw,64px);font-weight:400;line-height:1.02;letter-spacing:-1.6px;text-wrap:pretty">Design an education program that proves its outcomes.</h1>
+      <p style="margin:0;max-width:640px;font-size:clamp(16px,2vw,18px);line-height:1.5;color:var(--color-on-dark-soft);text-wrap:pretty">Select the objectives, focus areas and board-level success measures. The designer builds a co-branded proposal with the right classrooms, AI personas, Sentinel monitoring and outcome tracking.</p>
+    </div>
+  </section>
+
+  <section data-noprint="" style="background:var(--color-surface-soft)">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(12px,3vw,24px) clamp(56px,8vw,96px)">
+      <div style="margin-top:-72px;background:var(--color-canvas);border-radius:24px;border:1px solid var(--color-hairline);padding:clamp(20px,4vw,40px);display:flex;flex-direction:column;gap:clamp(32px,5vw,48px)">
+
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap">
+            <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">01</span>
+            <h2 style="margin:0;font-size:clamp(24px,3.5vw,32px);font-weight:400;letter-spacing:-0.4px;line-height:1.13">Partner profile</h2>
+            <span style="font-size:14px;color:var(--color-muted)">Who the program is for and its scale.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:16px 20px">
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Corporate / foundation</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.org }}" onChange="{{ set.org }}" placeholder="e.g. Bharti Airtel Foundation" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Program / mission name</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.program }}" onChange="{{ set.program }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">CSR head / contact</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.contact }}" onChange="{{ set.contact }}" placeholder="Name, designation" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Region / state</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.region }}" onChange="{{ set.region }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Total budget (₹ crore)</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" type="number" min="0.25" step="0.25" value="{{ f.budget }}" onChange="{{ set.budget }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Duration (months)</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" type="number" min="3" step="1" value="{{ f.duration }}" onChange="{{ set.duration }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Schools / classrooms</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" type="number" min="1" step="1" value="{{ f.schools }}" onChange="{{ set.schools }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Students per school</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" type="number" min="1" step="10" value="{{ f.spp }}" onChange="{{ set.spp }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Board / curriculum</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.board }}" onChange="{{ set.board }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Teaching language</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.language }}" onChange="{{ set.language }}" hint-size="100%,48px"></x-import></label>
+            <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600">Grades</span><x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Input" value="{{ f.grades }}" onChange="{{ set.grades }}" hint-size="100%,48px"></x-import></label>
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--color-hairline)"></div>
+
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap">
+            <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">02</span>
+            <h2 style="margin:0;font-size:clamp(24px,3.5vw,32px);font-weight:400;letter-spacing:-0.4px;line-height:1.13">Primary objectives</h2>
+            <span style="font-size:14px;color:var(--color-muted)">Select one or more outcomes the fund is set up to achieve.</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px">
+            <sc-for list="{{ objectives }}" as="o" hint-placeholder-count="7">
+              <button onClick="{{ o.onPick }}" style="text-align:left;cursor:pointer;font-family:var(--font-sans);background:{{ o.bg }};border:{{ o.border }};border-radius:24px;padding:20px 22px;display:flex;flex-direction:column;gap:6px">
+                <span style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:{{ o.eyebrow }}"><span style="width:16px;height:16px;border-radius:5px;border:{{ o.box }};background:{{ o.boxBg }};display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>{{ o.mark }}</span>
+                <span style="font-size:17px;font-weight:600;line-height:1.33;color:var(--color-ink)">{{ o.title }}</span>
+                <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ o.short }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--color-hairline)"></div>
+
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap">
+            <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">03</span>
+            <h2 style="margin:0;font-size:clamp(24px,3.5vw,32px);font-weight:400;letter-spacing:-0.4px;line-height:1.13">Key focus areas</h2>
+            <span style="font-size:14px;color:var(--color-muted)">Every challenge the program must address.</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ focusChips }}" as="c" hint-placeholder-count="8">
+              <button onClick="{{ c.onToggle }}" style="cursor:pointer;font-family:var(--font-sans);font-size:14px;font-weight:600;min-height:44px;padding:10px 18px;border-radius:100px;background:{{ c.bg }};color:{{ c.color }};border:1px solid {{ c.line }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--color-hairline)"></div>
+
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;align-items:baseline;gap:8px 16px;flex-wrap:wrap">
+            <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">04</span>
+            <h2 style="margin:0;font-size:clamp(24px,3.5vw,32px);font-weight:400;letter-spacing:-0.4px;line-height:1.13">What success means to your board</h2>
+            <span style="font-size:14px;color:var(--color-muted)">These become tracked KPIs.</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ priorityChips }}" as="c" hint-placeholder-count="7">
+              <button onClick="{{ c.onToggle }}" style="cursor:pointer;font-family:var(--font-sans);font-size:14px;font-weight:600;min-height:44px;padding:10px 18px;border-radius:100px;background:{{ c.bg }};color:{{ c.color }};border:1px solid {{ c.line }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px;max-width:760px"><span style="font-size:13px;font-weight:600">Notes from the conversation (optional)</span>
+            <textarea value="{{ f.notes }}" onChange="{{ set.notes }}" placeholder="e.g. Aspirational districts, girls in grades 6–10, quarterly board review in March" style="font-family:var(--font-sans);font-size:16px;line-height:1.5;color:var(--color-ink);min-height:96px;padding:14px 16px;border-radius:12px;border:1px solid var(--color-hairline);outline:none;resize:vertical" style-focus="border:2px solid var(--color-primary);padding:13px 15px"></textarea>
+          </label>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+          <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Button" size="lg" onClick="{{ generate }}" hint-size="220px,56px">Generate proposal</x-import>
+          <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Button" size="lg" variant="secondary-light" onClick="{{ reset }}" hint-size="120px,56px">Reset</x-import>
+          <span style="font-size:13px;color:var(--color-muted)">Updates live as you edit. Downloads as a co-branded A4 PDF.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ generated }}" hint-placeholder-val="{{ false }}">
+  <div id="proposal" ref="{{ reportRef }}" data-report="" data-screen-label="Proposal">
+
+    <!-- Cover -->
+    <section data-band="" style="background:var(--color-surface-dark);color:var(--color-on-dark)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(32px,5vw,48px)">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="width:12px;height:12px;border-radius:50%;background:var(--color-primary)"></span>
+            <span style="font-size:20px;font-weight:600;letter-spacing:-0.4px">Cybernetyx</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;text-align:right">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">Prepared for</span>
+            <span style="font-size:18px;font-weight:600">{{ f.org }}</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(28px,4vw,48px);align-items:center">
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ selTitles }}" as="t" hint-placeholder-count="1">
+                <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Badge" tone="on-dark" hint-size="200px,30px">{{ t }}</x-import>
+              </sc-for>
+            </div>
+            <h1 style="margin:0;font-family:var(--font-display);font-size:clamp(40px,6.5vw,64px);font-weight:400;line-height:1.0;letter-spacing:-1.6px;text-wrap:pretty">{{ f.program }}</h1>
+            <p style="margin:0;font-size:clamp(16px,2vw,18px);line-height:1.5;color:var(--color-on-dark-soft);text-wrap:pretty">{{ coverSub }}</p>
+            <span style="font-size:14px;color:var(--color-on-dark-soft)">{{ coverMeta }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <div style="background:var(--color-surface-dark-elevated);border-radius:24px;padding:12px">
+              <img src="{{ coverImg.src }}" alt="Cybernetyx in the classroom" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:{{ coverImg.pos }};display:block;border-radius:16px">
+            </div>
+            <div style="align-self:flex-start;width:min(100%,380px);margin:-56px 0 0 clamp(12px,3vw,32px);position:relative;background:var(--color-surface-dark-elevated);border:1px solid #2a2d33;border-radius:24px;padding:20px 24px;display:flex;flex-direction:column;gap:12px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">Outcome targets</span>
+              <sc-for list="{{ coverKpis }}" as="k" hint-placeholder-count="3">
+                <div style="display:flex;justify-content:space-between;gap:12px;font-size:14px"><span style="color:var(--color-on-dark-soft)">{{ k.name }}</span><span style="font-family:var(--font-mono);font-weight:500;white-space:nowrap">{{ k.target }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:20px 24px;border-top:1px solid #2a2d33;padding-top:28px">
+          <sc-for list="{{ coverMetrics }}" as="m" hint-placeholder-count="5">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:var(--font-mono);font-size:clamp(22px,3vw,28px);font-weight:500;letter-spacing:-0.5px">{{ m.v }}</span>
+              <span style="font-size:13px;color:var(--color-on-dark-soft)">{{ m.k }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Mission -->
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">01 — Mission design</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">What this mission sets out to achieve</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;align-items:start">
+          <div style="background:var(--color-surface-soft);border-radius:24px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;gap:20px">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">Mission intent</span>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-ink);text-wrap:pretty">{{ missionText }}</p>
+            <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--color-hairline);padding-top:16px">
+              <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="4">
+                <div style="display:flex;gap:10px;font-size:15px;line-height:1.45"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex:none;margin-top:3px"><path d="M3 8.5l3 3 7-7" stroke="#0a0b0d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>{{ h }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="border:1px solid var(--color-hairline);border-radius:24px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-primary)">{{ personaLabel }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-body)">Configured for {{ f.board }} and taught in {{ f.language }}.</span>
+            </div>
+            <sc-for list="{{ personas }}" as="p" hint-placeholder-count="1">
+              <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--color-hairline-soft);padding-top:16px;break-inside:avoid">
+                <span style="font-size:18px;font-weight:600;line-height:1.33">{{ p.name }}</span>
+                <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ p.desc }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Mandate -->
+    <section data-band="" style="background:var(--color-surface-soft)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">02 — Your mandate</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">Every requirement, matched to a solution</h2>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ mandate }}" as="r" hint-placeholder-count="4">
+            <div style="background:var(--color-canvas);border-radius:24px;padding:clamp(20px,3vw,28px) clamp(20px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px 32px;break-inside:avoid">
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">{{ r.kind }}</span>
+                <span style="font-size:18px;font-weight:600;line-height:1.33">{{ r.area }}</span>
+                <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ r.req }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">How Cybernetyx delivers</span>
+                <span style="font-size:15px;line-height:1.5;color:var(--color-ink);text-wrap:pretty">{{ r.resp }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">Delivered through</span>
+                <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ r.via }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px">
+          <span style="font-size:13px;font-weight:600;color:var(--color-ink);margin-right:6px">Board success measures</span>
+          <sc-for list="{{ successLabels }}" as="s" hint-placeholder-count="4">
+            <span style="font-size:13px;font-weight:600;padding:8px 14px;border-radius:100px;background:var(--color-canvas);border:1px solid var(--color-hairline)">{{ s }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Showcase -->
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">03 — In the classroom</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">What students and teachers will experience</h2>
+        </div>
+        <sc-if value="{{ showFeature }}" hint-placeholder-val="{{ false }}">
+          <div style="background:var(--color-surface-dark);color:var(--color-on-dark);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));break-inside:avoid">
+            <img src="{{ feature.img }}" alt="{{ feature.title }}" style="width:100%;height:100%;min-height:300px;max-height:460px;object-fit:cover;object-position:{{ feature.pos }};display:block">
+            <div style="padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:14px;justify-content:center">
+              <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">{{ feature.eyebrow }}</span>
+              <span style="font-size:clamp(22px,3vw,28px);font-weight:400;line-height:1.2;letter-spacing:-0.4px">{{ feature.title }}</span>
+              <span style="font-size:15px;line-height:1.5;color:var(--color-on-dark-soft)">{{ feature.caption }}</span>
+              <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #2a2d33;padding-top:16px">
+                <sc-for list="{{ feature.points }}" as="pt" hint-placeholder-count="3"><div style="display:flex;gap:10px;font-size:14px;line-height:1.5"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex:none;margin-top:3px"><path d="M3 8.5l3 3 7-7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>{{ pt }}</span></div></sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-wrap:wrap;gap:24px">
+            <sc-for list="{{ showcase }}" as="v" hint-placeholder-count="2">
+              <div style="flex:1 1 340px;min-width:0;background:var(--color-surface-dark);color:var(--color-on-dark);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;break-inside:avoid">
+                <img src="{{ v.img }}" alt="{{ v.title }}" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:{{ v.pos }};display:block">
+                <div style="padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:10px">
+                  <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">{{ v.eyebrow }}</span>
+                  <span style="font-size:20px;font-weight:600;line-height:1.3">{{ v.title }}</span>
+                  <span style="font-size:14px;line-height:1.5;color:var(--color-on-dark-soft)">{{ v.caption }}</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+    <!-- 04 Package -->
+    <section data-band="" style="background:var(--color-surface-soft)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">04 — Recommended package</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">{{ solCount }} components, one program</h2>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:var(--color-body)">Each component plays a distinct role, configured for {{ f.board }}, {{ f.language }} and {{ f.grades }}.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:20px">
+          <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="4">
+            <div style="flex:1 1 300px;min-width:0;background:var(--color-canvas);border-radius:24px;padding:clamp(22px,3vw,28px);display:flex;flex-direction:column;gap:10px;break-inside:avoid">
+              <div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">{{ s.tag }}</span><span style="font-family:var(--font-mono);font-size:13px;color:var(--color-muted)">{{ s.n }}</span></div>
+              <span style="font-size:18px;font-weight:600;line-height:1.33">{{ s.title }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ s.desc }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-ink);border-top:1px solid var(--color-hairline-soft);padding-top:10px"><b style="font-weight:600">Role in this program: </b>{{ s.role }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Delivery -->
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">05 — Delivery plan</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px">{{ f.duration }} months, {{ stepCount }} phases</h2>
+        </div>
+        <div style="display:flex;flex-direction:column;border-top:1px solid var(--color-ink)">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px 32px;padding:20px 0;border-bottom:1px solid var(--color-hairline);align-items:baseline;break-inside:avoid">
+              <div style="display:flex;gap:16px;align-items:baseline"><span style="font-family:var(--font-mono);font-size:14px">{{ s.n }}</span><span style="font-family:var(--font-mono);font-size:13px;color:var(--color-muted)">{{ s.months }}</span></div>
+              <span style="font-size:17px;font-weight:600;line-height:1.35">{{ s.t }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ s.d }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Ladder -->
+    <section data-band="" style="background:var(--color-surface-dark);color:var(--color-on-dark)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:#7aa2ff">06 — How we measure</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">Time spent is not learning. We track all the way to outcome.</h2>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:var(--color-on-dark-soft)">Most CSR technology reports stop at installation and screen time. Cybernetyx measures four levels, so your board sees whether children actually learned.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(calc(25% - 18px), (880px - 100%) * 999, clamp(calc(50% - 12px), (440px - 100%) * 999, 100%)),1fr));gap:24px">
+          <sc-for list="{{ ladder }}" as="l" hint-placeholder-count="4">
+            <div style="background:var(--color-surface-dark-elevated);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px;break-inside:avoid">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+                <span style="font-family:var(--font-mono);font-size:13px;color:var(--color-on-dark-soft)">{{ l.n }}</span>
+                <span style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:{{ l.tagBg }};color:#ffffff">{{ l.tag }}</span>
+              </div>
+              <span style="font-size:22px;font-weight:600">{{ l.name }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-on-dark-soft)">{{ l.q }}</span>
+              <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #2a2d33;padding-top:12px">
+                <sc-for list="{{ l.metrics }}" as="m" hint-placeholder-count="3">
+                  <div style="display:flex;gap:10px;font-size:14px;line-height:1.4"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex:none;margin-top:2px"><path d="M3 8.5l3 3 7-7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>{{ m }}</span></div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Engagement efficiency -->
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:800px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">07 — Engagement efficiency</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px">Minutes that mattered, not minutes logged</h2>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <div style="flex:1 1 240px;background:var(--color-surface-soft);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:13px;color:var(--color-muted)">Engaged minutes</span>
+            <span style="font-size:15px;line-height:1.5">Time with live student questions, responses, activities or teacher-led interaction.</span>
+          </div>
+          <div style="flex:1 1 240px;background:var(--color-surface-soft);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:13px;color:var(--color-muted)"><span style="font-family:var(--font-mono);color:var(--color-ink)">÷</span> Screen-on minutes</span>
+            <span style="font-size:15px;line-height:1.5">Total time the system was on, including idle, video-only and unattended time.</span>
+          </div>
+          <div style="flex:1 1 240px;background:var(--color-surface-dark);color:var(--color-on-dark);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:13px;color:var(--color-on-dark-soft)"><span style="font-family:var(--font-mono);color:#fff">=</span> Engagement efficiency</span>
+            <span style="font-family:var(--font-mono);font-size:36px;font-weight:500">≥ 70%</span>
+            <span style="font-size:13px;color:var(--color-on-dark-soft)">Program target</span>
+          </div>
+        </div>
+        <sc-if value="{{ showMock }}" hint-placeholder-val="{{ true }}">
+        <div style="border:1px solid var(--color-hairline);border-radius:24px;overflow:hidden;break-inside:avoid">
+          <div style="padding:20px clamp(20px,3vw,32px);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--color-hairline)">
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:600">Monthly program view</span><span style="font-size:13px;color:var(--color-muted)">Illustrative sample of the dashboard your team receives</span></div>
+            <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Badge" hint-size="110px,30px">Sample data</x-import>
+          </div>
+          <div style="overflow-x:auto">
+            <div style="min-width:720px">
+              <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr 1.5fr;gap:16px;padding:12px clamp(20px,3vw,32px);background:var(--color-surface-soft);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">
+                <span>School cluster</span><span>Screen time / wk</span><span>Engagement eff.</span><span>Interactions / class</span><span>Mastery gain</span><span>Signal</span>
+              </div>
+              <sc-for list="{{ mockRows }}" as="r" hint-placeholder-count="5">
+                <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr 1.5fr;gap:16px;padding:14px clamp(20px,3vw,32px);border-top:1px solid var(--color-hairline-soft);align-items:center;font-size:14px">
+                  <span style="font-weight:600">{{ r.name }}</span>
+                  <span style="font-family:var(--font-mono)">{{ r.time }}</span>
+                  <span style="font-family:var(--font-mono);color:{{ r.effColor }}">{{ r.eff }}</span>
+                  <span style="font-family:var(--font-mono)">{{ r.inter }}</span>
+                  <span style="font-family:var(--font-mono);color:{{ r.gainColor }}">{{ r.gain }}</span>
+                  <span style="color:{{ r.sigColor }};font-weight:600">{{ r.signal }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="padding:16px clamp(20px,3vw,32px);background:var(--color-surface-soft);font-size:14px;line-height:1.5">A time-spent report would rank Cluster B first. Cybernetyx flags it: high screen time, low interaction, no learning gain — and routes it for teacher support.</div>
+        </div>
+        </sc-if>
+      </div>
+    </section>
+
+    <!-- 08 Sentinel -->
+    <section data-band="" style="background:var(--color-surface-soft)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">08 — Sentinel AI monitoring</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">A direct window into every supported classroom</h2>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:var(--color-body);text-wrap:pretty">View live or recorded sessions, review activity on a timeline and access classroom-level evidence — without waiting for field visits.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px;align-items:stretch">
+          <div style="background:var(--color-canvas);border-radius:24px;overflow:hidden;break-inside:avoid;display:flex;align-items:center"><img src="assets/live_monitor.jpg" alt="Sentinel live classroom monitoring" style="width:100%;display:block"></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">
+            <sc-for list="{{ sentinel }}" as="s" hint-placeholder-count="4">
+              <div style="background:var(--color-canvas);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px;break-inside:avoid">
+                <span style="font-size:16px;font-weight:600">{{ s.t }}</span>
+                <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ s.d }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:24px">
+          <sc-for list="{{ evidence }}" as="e" hint-placeholder-count="2">
+            <div style="flex:1 1 340px;min-width:0;background:var(--color-canvas);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;break-inside:avoid">
+              <img src="{{ e.img }}" alt="{{ e.t }}" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;border-bottom:1px solid var(--color-hairline-soft)">
+              <div style="padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;gap:8px">
+                <span style="font-size:18px;font-weight:600">{{ e.t }}</span>
+                <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ e.d }}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Impact agent -->
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">09 — CSR Impact AI Agent</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">Ask the program anything</h2>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:var(--color-body);text-wrap:pretty">A dedicated impact assistant sits on your program data. Authorised stakeholders ask in plain language and get a concise answer with school and classroom context.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;align-items:start">
+          <div style="background:var(--color-surface-soft);border-radius:24px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:16px;break-inside:avoid">
+            <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">Try asking</span>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <sc-for list="{{ asks }}" as="a" hint-placeholder-count="6">
+                <div style="align-self:flex-start;max-width:100%;background:var(--color-canvas);border:1px solid var(--color-hairline);border-radius:100px;padding:10px 18px;font-size:14px;font-weight:500">{{ a }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <sc-for list="{{ agentGets }}" as="g" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--color-hairline);break-inside:avoid">
+                <span style="width:36px;height:36px;border-radius:50%;background:var(--color-surface-strong);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:14px">{{ g.n }}</span>
+                <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">{{ g.t }}</span><span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ g.d }}</span></div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 KPIs -->
+    <section data-band="" style="background:var(--color-surface-soft)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">10 — KPIs and what we track</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">The targets we commit to</h2>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:20px">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+            <div style="flex:1 1 240px;min-width:0;background:var(--color-canvas);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px;break-inside:avoid">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">{{ k.level }}</span>
+              <span style="font-size:17px;font-weight:600">{{ k.name }}</span>
+              <span style="font-family:var(--font-mono);font-size:32px;font-weight:500;letter-spacing:-0.5px;white-space:nowrap">{{ k.target }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ k.how }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="background:var(--color-canvas);border-radius:24px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:16px;break-inside:avoid">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">Also tracked continuously</span>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px 32px">
+            <sc-for list="{{ tracked }}" as="t" hint-placeholder-count="6">
+              <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--color-hairline-soft);padding-top:12px"><span style="font-size:15px;font-weight:600">{{ t.t }}</span><span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ t.d }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 Compare -->
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">11 — Monitoring, compared</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">Visibility a typical program cannot give you</h2>
+        </div>
+        <div style="display:flex;flex-direction:column;border-top:1px solid var(--color-ink)">
+          <div style="display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr) minmax(0,1.1fr);gap:12px 16px;padding:12px 0;border-bottom:1px solid var(--color-hairline);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">
+            <span>Capability</span><span>Typical smart class</span><span style="color:var(--color-primary)">Cybernetyx</span>
+          </div>
+          <sc-for list="{{ compare }}" as="c" hint-placeholder-count="8">
+            <div style="display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr) minmax(0,1.1fr);gap:12px 16px;padding:14px 0;border-bottom:1px solid var(--color-hairline);align-items:center;font-size:14px;break-inside:avoid">
+              <div style="display:flex;flex-direction:column;gap:2px"><span style="font-weight:600;font-size:15px">{{ c.cap }}</span><span style="font-size:13px;color:var(--color-muted)">{{ c.note }}</span></div>
+              <span style="color:{{ c.typColor }}">{{ c.typ }}</span>
+              <div style="display:flex;align-items:flex-start;gap:8px"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex:none;margin-top:2px"><path d="M3 8.5l3 3 7-7" stroke="#0052ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-weight:600">{{ c.cx }}</span></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 Reporting & support -->
+    <section data-band="" style="background:var(--color-surface-soft)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:820px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">12 — Reporting and implementation support</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px;text-wrap:pretty">Evidence on a schedule your board can rely on</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(calc(25% - 15px), (880px - 100%) * 999, clamp(calc(50% - 10px), (440px - 100%) * 999, 100%)),1fr));gap:20px">
+          <sc-for list="{{ cadence }}" as="c" hint-placeholder-count="4">
+            <div style="background:var(--color-canvas);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px;break-inside:avoid">
+              <span style="font-family:var(--font-mono);font-size:13px;color:var(--color-muted)">{{ c.when }}</span>
+              <span style="font-size:17px;font-weight:600">{{ c.t }}</span>
+              <span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ c.d }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="background:var(--color-canvas);border-radius:24px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:16px;break-inside:avoid">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-muted)">CSR implementation officer support</span>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px 32px">
+            <sc-for list="{{ supports }}" as="s" hint-placeholder-count="4">
+              <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--color-hairline-soft);padding-top:12px"><span style="font-size:15px;font-weight:600">{{ s.t }}</span><span style="font-size:14px;line-height:1.5;color:var(--color-body)">{{ s.d }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 Budget -->
+    <sc-if value="{{ showBudget }}" hint-placeholder-val="{{ true }}">
+    <section data-band="" style="background:var(--color-canvas)">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,56px);break-inside:avoid">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--color-primary)">13 — Indicative budget</span>
+          <h2 style="margin:0;font-family:var(--font-display);font-size:clamp(30px,4.5vw,44px);font-weight:400;line-height:1.09;letter-spacing:-1px">{{ budgetLabel }} over {{ f.duration }} months</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:24px 40px;margin-top:12px">
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:var(--font-mono);font-size:32px;font-weight:500">{{ cpsy }}</span><span style="font-size:14px;color:var(--color-muted)">Per student, per year</span></div>
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:var(--font-mono);font-size:32px;font-weight:500">{{ studentsLabel }}</span><span style="font-size:14px;color:var(--color-muted)">Students reached</span></div>
+          </div>
+          <p style="margin:12px 0 0;font-size:13px;line-height:1.5;color:var(--color-muted)">Indicative planning only. Final scope depends on school baseline, device mix, connectivity and deployment conditions.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+          <sc-for list="{{ budgetRows }}" as="b" hint-placeholder-count="5">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;font-size:15px"><span style="font-weight:600">{{ b.label }}</span><span style="font-family:var(--font-mono);color:var(--color-body)">{{ b.amt }} · {{ b.pct }}</span></div>
+              <div style="height:8px;border-radius:100px;background:var(--color-surface-strong);overflow:hidden"><div style="height:100%;border-radius:100px;background:{{ b.fill }};width:{{ b.width }}"></div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- Board summary -->
+    <section data-band="" style="background:var(--color-surface-dark);color:var(--color-on-dark);break-inside:avoid">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,4vw,24px) clamp(40px,6vw,64px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
+        <span style="font-family:var(--font-mono);font-size:14px;color:#7aa2ff">Board-level summary</span>
+        <p style="margin:0;max-width:980px;font-family:var(--font-display);font-size:clamp(22px,3vw,32px);font-weight:400;line-height:1.3;letter-spacing:-0.4px;text-wrap:pretty">{{ boardText }}</p>
+        <sc-if value="{{ hasNotes }}" hint-placeholder-val="{{ false }}">
+          <div style="max-width:760px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">Context from our conversation</span><span style="font-size:16px;line-height:1.5">{{ f.notes }}</span></div>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:24px;border-top:1px solid #2a2d33;padding-top:28px">
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">Prepared for</span><span style="font-size:16px;font-weight:600">{{ f.org }}</span><span style="font-size:14px;color:var(--color-on-dark-soft)">{{ f.contact }}</span></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">Prepared by</span><span style="font-size:16px;font-weight:600">Cybernetyx</span><span style="font-size:14px;color:var(--color-on-dark-soft)">CSR Education Solutions</span></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--color-on-dark-soft)">Date</span><span style="font-family:var(--font-mono);font-size:16px">{{ today }}</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div data-noprint="" style="max-width:1200px;margin:0 auto;padding:40px clamp(16px,4vw,24px) 80px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+      <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Button" size="lg" onClick="{{ downloadPdf }}" hint-size="200px,56px">Download PDF</x-import>
+      <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Button" size="lg" variant="secondary-light" onClick="{{ copySummary }}" hint-size="180px,56px">{{ copyLabel }}</x-import>
+      <x-import component-from-global-scope="CoinbaseDesignSystem_6f4408.Button" size="lg" variant="secondary-light" onClick="{{ goTop }}" hint-size="160px,56px">Edit inputs</x-import>
+    </div>
+  </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMock&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Proposal&quot;}, &quot;showBudget&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Proposal&quot;}}">
+const KEY = 'cx-csr-designer-v2';
+const DEFAULTS = { org: 'Adani Foundation', program: 'Future Learning Mission', contact: '', region: 'Karnataka', budget: 5, duration: 24, schools: 50, spp: 240, board: 'State Board', language: 'Kannada + English', grades: 'Grades 6–10', objectives: ['digital'], focus: ['teacher', 'language', 'exams', 'access', 'inclusion'], priorities: ['learning', 'engagement', 'participation', 'adoption'], notes: '' };
+
+const IMG = { display: 'assets/display_class.png', ai: 'assets/display_ai.png', simsim: 'assets/simsim.png', stem: 'assets/govt_stem.jpg', remote: 'assets/remote_csr.jpg' };
+
+const SOL = {
+  display: { title: 'Interactive AI Classroom Display', tag: 'Core classroom hub', desc: 'The core teaching surface in government schools — expert teaching, visual explanation, curriculum-aligned AI agents and interactive learning in one familiar environment.', role: 'The main surface where expert teaching, visual explanation, classroom activities and AI support come together.' },
+  classroomAgent: { title: 'Board-aligned Teaching Agent', tag: 'AI persona', desc: 'A curriculum-aware teaching agent aligned to the selected board and language.', role: 'Gives the same classroom infrastructure a mission-specific persona for board, language, grade and objective.' },
+  studentAgent: { title: 'Expert Teaching Assistant', tag: 'AI persona', desc: 'A learner-facing assistant that explains, revises, guides practice and resolves doubts in the student’s language.', role: 'Extends expert guidance to individual learners beyond the limits of teacher availability.' },
+  continuityAgent: { title: 'Continuity & Guidance Agent', tag: 'AI persona', desc: 'Maintains learning continuity, revision pathways and structured guidance where expertise is uneven.', role: 'Keeps guidance and revision active even when teaching support is disrupted.' },
+  stemLab: { title: 'STEM Learning Experience', tag: 'STEM / simulation', desc: 'Visual explanation, simulations and guided experiments that make STEM concepts tangible.', role: 'Adds an exploratory layer so learners run experiments rather than consume static content.' },
+  aiLab: { title: 'AI Skill Lab', tag: 'Future skills', desc: 'A structured AI and future-skills environment with guided activities and applied projects.', role: 'Hands-on AI literacy — students collect data, train models and discuss responsible use.' },
+  simsim: { title: 'SimSim Box — learner companion', tag: 'Companion device', desc: 'A compact, offline-capable AI companion for stories, language practice, revision and continuity.', role: 'Gives learners a personal touchpoint for guided practice outside the main classroom.' },
+  coaching: { title: 'Entrance Preparation Agent', tag: 'Coaching persona', desc: 'Expert explanation, practice, doubt solving and revision for entrance and competitive exams.', role: 'Adds focused coaching for concept mastery, revision and structured practice.' },
+  studio: { title: 'Expert Studio + Live Classroom Connect', tag: 'Remote teaching', desc: 'A central expert studio connected live to many government-school classrooms with two-way interaction.', role: 'Creates a one-to-many model where scarce teaching expertise serves many remote classrooms live.' },
+  training: { title: 'Teacher Training & Adoption', tag: 'Enablement', desc: 'Onboarding, classroom integration support and refresher training.', role: 'Makes the technology part of actual teaching practice, not an occasional add-on.' },
+  monitoring: { title: 'Sentinel Outcome Intelligence', tag: 'Program assurance', desc: 'Live and recorded classroom evidence, engagement analytics and learning outcome tracking.', role: 'Shows what is active, where adoption is weak and which schools need intervention.' },
+  impactAgent: { title: 'CSR Impact AI Agent', tag: 'Decision support', desc: 'A plain-language assistant on top of program data for CSR heads and implementation officers.', role: 'Turns implementation data into instant answers, risks and recommended actions.' }
+};
+
+const OBJ = {
+  digital: { title: 'Digital Classroom Transformation', short: 'Upgrade everyday teaching quality with AI-enabled classrooms.', snapshot: 'Stronger everyday classroom teaching through interactive AI displays and a board-aligned teaching agent, raising quality, consistency and engagement.', highlights: ['Expert teaching support inside the classroom', 'Local-language, board-aligned teaching assistance', 'Teacher adoption supported through enablement'], agent: 'State Board Classroom Teaching Agent', agentDesc: 'A classroom co-teacher that explains concepts, answers questions, generates visual examples and supports lesson flow.', solutions: ['display', 'classroomAgent', 'training', 'monitoring'], steps: [['Deploy classroom package', 'Install displays and configure the teaching environment in selected schools.'], ['Activate the teaching agent', 'Align the agent to board, grade and teaching language.'], ['Train teachers for everyday use', 'Enable teachers to teach with the agent confidently.'], ['Track adoption and improve', 'Review usage, engagement and outcomes; support where adoption is weak.']], outcomes: ['Student Reach & Attendance', 'Classroom Usage', 'Student Engagement', 'Teaching Activity', 'Participation', 'Teacher Adoption'], support: [['Monthly usage dashboard', 'Active schools, teachers, classroom sessions and adoption patterns.'], ['Exception-based follow-up', 'Priority list of low-usage or low-engagement schools needing intervention.'], ['Quarterly review pack', 'Board-ready summary of adoption, engagement and progress.'], ['Improvement recommendations', 'Practical next steps for training, support and strengthening.']], budget: [58, 14, 12, 8, 8], visual: { img: IMG.display, pos: 'center', eyebrow: 'Digital classroom', title: 'Every period becomes an expert-led, visual lesson', caption: 'The teacher leads; the board-aligned agent explains, visualises and answers questions on the interactive display.', points: ['Visual explanations in __LANG__', 'Teacher stays in control of the lesson', 'Every interaction feeds outcome tracking'] } },
+  assistant: { title: 'Teaching Assistant for Every Student', short: 'Expert, multilingual support and doubt solving for every learner.', snapshot: 'Every student gets expert guidance, doubt support and multilingual explanation, in class and beyond it.', highlights: ['Expert support for every learner', 'Multilingual explanation and doubt resolution', 'Continuity beyond the classroom'], agent: 'Every-Student Expert Teaching Assistant', agentDesc: 'Helps students understand lessons in their own language, revisit concepts, ask questions and keep learning when expert support is limited.', solutions: ['display', 'studentAgent', 'simsim', 'training', 'monitoring'], steps: [['Use the display for expert teaching', 'Structured teaching and explanations in the classroom.'], ['Extend support to every learner', 'Personalised explanation and doubt resolution.'], ['Add learner companions', 'SimSim Box extends support outside the classroom.'], ['Monitor reach and engagement', 'Track how students use support and where more is needed.']], outcomes: ['Student Reach & Attendance', 'Student Engagement', 'Participation', 'Improvement Trend', 'Continuity'], support: [['Learner continuity view', 'Which learner groups use support well and where continuity is weak.'], ['Adoption snapshots', 'Whether the student-support layer is used, not only the classroom layer.'], ['Quarterly beneficiary narrative', 'A CSR-friendly story of learner access and continuity.']], budget: [46, 22, 13, 11, 8], visual: { img: IMG.simsim, pos: 'center 72%', eyebrow: 'Learner companion', title: 'A teaching assistant that goes home with every child', caption: 'SimSim Box carries guided learning beyond class — offline-capable, kid-safe and in the child’s own language.', points: ['Doubt solving in __LANG__', 'Works offline in low-connectivity homes', 'Continuity measured between classes'] } },
+  continuity: { title: 'School & Guidance Continuity', short: 'Keep learning going despite uneven teacher availability.', snapshot: 'Resilient school learning, so teaching and guidance do not stop when teacher availability or coaching access becomes uneven.', highlights: ['Preserves continuity of learning', 'Structured mentoring and revision support', 'Tracks whether continuity is holding'], agent: 'Learning & Guidance Continuity Agent', agentDesc: 'Maintains structured learning pathways, revision, mentoring and follow-through so students continue with fewer disruptions.', solutions: ['display', 'continuityAgent', 'simsim', 'training', 'monitoring'], steps: [['Set up the continuity backbone', 'Display-led teaching and continuity workflows.'], ['Activate the guidance layer', 'Maintain academic support and resume learning pathways.'], ['Extend to learner touchpoints', 'Companion access where required.'], ['Review and intervene', 'See where continuity holds and where it breaks down.']], outcomes: ['Classroom Usage', 'Teacher Adoption', 'Continuity', 'Improvement Trend'], support: [['Continuity risk alerts', 'Schools or clusters where activity is dropping.'], ['Refresher support plans', 'Follow-up for schools where teachers need renewed enablement.'], ['Escalation notes', 'Where stronger field support is needed.']], budget: [44, 22, 14, 12, 8], visual: { img: IMG.simsim, pos: 'center 72%', eyebrow: 'Learning continuity', title: 'Learning that continues when the classroom can’t', caption: 'When a teacher is absent or school is disrupted, guided pathways continue on the display and on SimSim Box.', points: ['Revision pathways resume automatically', 'Companion device works offline', 'Continuity risk flagged weekly'] } },
+  stem: { title: 'STEM Learning', short: 'Make STEM visual and applied through simulations and inquiry.', snapshot: 'AI-enabled visual learning, simulations and guided experiments that make STEM engaging, applied and accessible.', highlights: ['Interactive STEM simulations and experiments', 'Teacher-supported inquiry', 'Tracks participation in STEM activities'], agent: 'STEM Discovery & Skill Agent', agentDesc: 'Supports experiments, demonstrations, project ideas and inquiry-led learning, making science and maths visual.', solutions: ['display', 'stemLab', 'training', 'monitoring'], steps: [['Equip STEM classrooms', 'AI-enabled interactive surfaces for STEM instruction.'], ['Run visual STEM experiences', 'Simulations and guided experiments explain concepts clearly.'], ['Support teacher facilitation', 'Train teachers to run activity-based sessions.'], ['Measure engagement and mastery', 'Review participation and concept gains across schools.']], outcomes: ['Student Engagement', 'Teaching Activity', 'Participation', 'Content / Viewing Signals'], support: [['Activity participation snapshot', 'Class activity and STEM engagement across schools.'], ['Usage by content type', 'Which STEM modules resonate and which need support.'], ['Quarterly STEM impact summary', 'Classroom activity as a concise impact story.']], budget: [54, 16, 13, 9, 8], visual: { img: IMG.stem, pos: 'center', eyebrow: 'STEM experiences', title: 'Experiments students run at the board', caption: 'Virtual labs — like building an electric circuit — let students predict, test and see the result, guided in __LANG__.', points: ['Interactive simulations and virtual experiments', 'Students explore and test at the display', 'Concept mastery tracked per experiment'] } },
+  ai: { title: 'AI Literacy & Future Skills', short: 'Practical, responsible AI understanding through guided pathways.', snapshot: 'Structured AI literacy, responsible AI use and future-ready digital skills through guided classroom pathways and projects.', highlights: ['Age-appropriate AI literacy', 'Responsible AI and practical use', 'Guided pathways, not one-off workshops'], agent: 'AI Skill & Future Readiness Agent', agentDesc: 'Delivers age-appropriate AI literacy — responsible use, prompting, creativity and application — through guided pathways.', solutions: ['display', 'aiLab', 'training', 'monitoring'], steps: [['Create AI-ready spaces', 'Deploy the display-led environment for AI experiences.'], ['Launch AI literacy pathways', 'Guided, age-appropriate lessons and projects.'], ['Prepare teachers', 'Train teachers to facilitate AI learning with confidence.'], ['Monitor skills progress', 'Track pathway completion and applied project outcomes.']], outcomes: ['Classroom Usage', 'Participation', 'Improvement Trend', 'Teacher Adoption'], support: [['School readiness summary', 'Which schools progress well with AI literacy rollout.'], ['Teacher confidence view', 'Where adoption is limited by teacher readiness.'], ['Quarterly future-skills report', 'Progress in a board-friendly form.']], budget: [46, 24, 12, 10, 8], visual: { img: IMG.ai, pos: 'center', eyebrow: 'AI Skill Lab', title: 'Students train their own AI vision model', caption: 'Learners add examples, train a model on the live camera feed and watch it recognise objects — hands-on AI in __LANG__.', points: ['Collect, train and test in one lesson', 'Responsible AI discussed alongside the build', 'Pathway progress tracked per group'] } },
+  entrance: { title: 'Entrance & Coaching Support', short: 'Expert exam guidance for underserved students.', snapshot: 'Expert teaching, structured revision and coaching-style support for students without access to quality entrance preparation.', highlights: ['Access to expert coaching', 'Revision and doubt solving built in', 'Tracks continuity of preparation'], agent: 'Entrance Preparation & Expert Coaching Agent', agentDesc: 'Supports concept mastery, practice, doubt clearing, revision planning and exam readiness.', solutions: ['display', 'coaching', 'simsim', 'training', 'monitoring'], steps: [['Set up expert teaching access', 'Classroom displays for conceptual teaching and problem solving.'], ['Enable the coaching agent', 'Structured practice, revision and exam readiness.'], ['Support revision outside class', 'Companion support for continuous revision.'], ['Track readiness', 'Measure practice depth and mock performance.']], outcomes: ['Participation', 'Improvement Trend', 'Continuity'], support: [['Coaching usage summary', 'Whether the program is used for sustained preparation.'], ['Revision continuity signals', 'Whether learners continue outside scheduled sessions.'], ['Quarterly program narrative', 'An access-to-opportunity story for CSR review.']], budget: [45, 24, 13, 10, 8], visual: { img: IMG.simsim, pos: 'center 72%', eyebrow: 'Coaching + companion', title: 'Coaching in class, revision every evening', caption: 'Concept teaching on the display; practice and doubt clearing continue on the companion device.', points: ['Structured practice and revision plans', 'Doubts resolved in __LANG__', 'Readiness tracked through mocks'] } },
+  remote: { title: 'Remote Learning / Expert Studio', short: 'One expert studio teaching many remote classrooms live.', snapshot: 'One expert studio connected live to many remote classrooms, so high-quality teaching reaches hard-to-serve geographies.', highlights: ['One expert teaching many classrooms', 'Live delivery plus local continuity', 'Tracks reach, participation and follow-through'], agent: 'Remote Teaching & Live Classroom Agent', agentDesc: 'Supports expert-led live sessions, coordinates studio and classrooms, and continues learning after the live class.', solutions: ['studio', 'display', 'classroomAgent', 'training', 'monitoring'], steps: [['Build the expert studio', 'One studio running the live classroom application.'], ['Connect remote classrooms', 'Classrooms join expert-led sessions on their displays.'], ['Support local facilitation', 'Facilitators anchor sessions and continue learning locally.'], ['Measure delivery and continuity', 'Track live participation, reach and follow-through.']], outcomes: ['Student Reach & Attendance', 'Participation', 'Teaching Activity', 'Continuity'], support: [['Studio-to-classroom visibility', 'Which classrooms join, participate and sustain.'], ['Session quality follow-up', 'Where facilitation or technical support is needed.'], ['Scale-up guidance', 'When and where the studio model can expand.']], budget: [52, 18, 10, 12, 8], visual: { img: IMG.remote, pos: 'center', eyebrow: 'Remote learning setup', title: 'One expert studio, many connected classrooms', caption: 'A subject expert teaches live from the studio display; __SCHOOLS__ connected classrooms receive the lesson on their own interactive displays with two-way interaction.', points: ['Live, two-way classes across locations', 'Local facilitator anchors each classroom', 'Attendance and participation tracked per site'] } }
+};
+
+const FOCUS = [
+  ['teacher', 'Teacher shortage', 'Classrooms without subject specialists', 'The teaching agent co-teaches every period; an expert studio can cover specialist gaps live.', 'Teaching Agent · Expert Studio'],
+  ['language', 'Mother-tongue learning', 'Students learn best in their own language', 'Agents explain, answer and revise in __LANG__, aligned to __BOARD__.', 'Teaching Agent · Teaching Assistant'],
+  ['girls', 'Girls’ education', 'Retention and confidence of girl students', 'Private doubt solving and companion devices for continued learning; reach and outcomes reported by gender.', 'Teaching Assistant · SimSim Box · Sentinel'],
+  ['tribal', 'Tribal & remote schools', 'Hard-to-reach schools with thin expertise', 'Live expert sessions to many classrooms, with local continuity on SimSim Box between sessions.', 'Expert Studio · SimSim Box'],
+  ['fln', 'Foundational literacy & numeracy', 'Children behind grade level in reading and maths', 'Story, language and number practice; level-wise diagnostics show who is catching up.', 'SimSim Box · Sentinel'],
+  ['exams', 'Board exam results', 'Performance in grade 10 and 12 board exams', 'Concept revision, practice and doubt solving; chapter-level mastery tracked ahead of exams.', 'Teaching Assistant · Sentinel'],
+  ['access', 'Digital access gap', 'Schools with little digital infrastructure', 'One interactive AI display becomes the classroom hub — no per-student device needed.', 'Interactive AI Display'],
+  ['inclusion', 'Inclusive learning', 'Learners needing different pace and formats', 'Visual, audio and repeatable explanations; the agent adapts pace to each question.', 'Teaching Agent · Teaching Assistant']
+];
+
+const KPI = {
+  learning: { label: 'Learning outcomes', name: 'Concept mastery gain', target: '+15 pts', level: 'Outcome', how: 'Pre/post diagnostics on board-aligned concepts, every term.', track: 'Improvement Trend' },
+  engagement: { label: 'Engagement quality', name: 'Engagement efficiency', target: '≥ 70%', level: 'Engagement', how: 'Engaged minutes ÷ screen-on minutes. Idle time does not count.', track: 'Student Engagement' },
+  participation: { label: 'Student participation', name: 'Interactions per class', target: '≥ 25', level: 'Engagement', how: 'Student questions, responses and activity inputs per session.', track: 'Participation' },
+  adoption: { label: 'Teacher adoption', name: 'Teacher weekly active', target: '≥ 80%', level: 'Usage', how: 'Trained teachers teaching with the system 3+ times a week.', track: 'Teacher Adoption' },
+  reach: { label: 'Reach & attendance', name: 'Beneficiary reach', target: '≥ 90%', level: 'Usage', how: 'Enrolled students attending AI-supported sessions each month.', track: 'Student Reach & Attendance' },
+  continuity: { label: 'Learning continuity', name: 'Weekly continuity rate', target: '≥ 60%', level: 'Engagement', how: 'Learners using revision or companion support between classes.', track: 'Continuity' },
+  skills: { label: 'Skills & exam readiness', name: 'Pathway completion', target: '≥ 75%', level: 'Outcome', how: 'Students completing guided skill or preparation pathways.', track: 'Content / Viewing Signals' }
+};
+const ACTIVE = { name: 'Active classroom rate', target: '≥ 85%', level: 'Usage', how: 'Installed classrooms running 4+ teaching sessions a week.' };
+
+const TRACK = { 'Student Reach & Attendance': 'How many students attend and how reliably intended beneficiaries are reached.', 'Classroom Usage': 'How often the display, live classroom application and agents are actually used.', 'Student Engagement': 'Observed participation and engagement signals during class.', 'Teaching Activity': 'How often the environment is used for real classroom instruction.', 'Participation': 'Student questions, interactions and activities during learning.', 'Improvement Trend': 'Whether use, engagement and mastery improve over time or after intervention.', 'Content / Viewing Signals': 'Which modules, topics or formats are used or repeated.', 'Teacher Adoption': 'Which teachers use the system regularly and who needs handholding.', 'Continuity': 'Whether learners keep using support across time and disruptions.' };
+
+const LADDER = [
+  { n: 'Level 1', name: 'Deployment', q: 'Is it installed and working?', metrics: ['Installation status', 'Device uptime', 'Board configuration'], typical: true },
+  { n: 'Level 2', name: 'Usage', q: 'Is it being used, and by whom?', metrics: ['Sessions per classroom', 'Teacher adoption', 'Attendance'], typical: true },
+  { n: 'Level 3', name: 'Engagement', q: 'Are students actively learning in the session?', metrics: ['Engagement efficiency', 'Questions and responses', 'Activity participation'], typical: false },
+  { n: 'Level 4', name: 'Outcome', q: 'Did learning measurably improve?', metrics: ['Concept mastery gain', 'Improvement over time', 'Gaps by school and concept'], typical: false }
+];
+
+const SENTINEL = [
+  { t: 'Attendance & presence', d: 'Whether intended beneficiaries are attending and how attendance changes over time.' },
+  { t: 'Engagement & participation', d: 'Whether students participate, ask questions and stay on task.' },
+  { t: 'Teaching practice', d: 'Explanation, interaction and questioning patterns that show where teachers need support.' },
+  { t: 'Program improvement', d: 'Trends before and after training, content or field interventions.' }
+];
+const EVIDENCE = [
+  { img: 'assets/intel_reports.jpg', t: 'Classroom intelligence reports', d: 'Behaviour, engagement, teaching practice, attendance and lesson-level insight together — educational activity, not just technology usage.' },
+  { img: 'assets/impact_agent.jpg', t: 'CSR Impact AI Agent', d: 'Ask about attendance, engagement, classroom functioning or teacher support and get an answer with the data behind it.' }
+];
+const ASKS = ['How many students attended today?', 'Which classrooms are not functioning well?', 'How has engagement changed this month?', 'Which teachers may need refresher training?', 'Are remote classrooms joining expert sessions?', 'Which schools need implementation support now?'];
+const GETS = [
+  { n: '1', t: 'Instant program visibility', d: 'Answers across attendance, engagement, teaching activity, functioning and continuity.' },
+  { n: '2', t: 'Evidence behind the answer', d: 'Move from summary to the relevant report, session or recording where permitted.' },
+  { n: '3', t: 'Recommended intervention', d: 'Whether the next step is teacher training, field support, device support or redesign.' },
+  { n: '4', t: 'Board-ready narrative', d: 'Real implementation signals turned into concise governance updates.' }
+];
+
+const COMPARE = [
+  ['Installation & uptime', 'Device health and availability', 'Yes', 'Live, per device'],
+  ['Time spent', 'Hours the system was on', 'Yes', 'Separated from engaged time'],
+  ['Live & recorded classroom evidence', 'Watch sessions, review timelines', 'No', 'Sentinel, per classroom'],
+  ['Engagement efficiency', 'Engaged vs idle minutes', 'No', 'Per class, per teacher'],
+  ['Concept-level learning gain', 'Pre/post mastery on board concepts', 'No', 'Every term'],
+  ['Teacher practice insight', 'Explanation, questioning, interaction', 'Partial', 'Per teacher, with coaching cues'],
+  ['Exception alerts', 'Schools slipping on use or learning', 'No', 'Weekly, prioritised'],
+  ['Plain-language Q&A on data', 'Ask the program a question', 'No', 'CSR Impact AI Agent'],
+  ['Board-ready impact pack', 'Outcome narrative for the CSR committee', 'Partial', 'Quarterly, co-branded']
+];
+
+const CADENCE = [
+  { when: 'Weekly', t: 'Exception alerts', d: 'Schools or teachers slipping on usage, engagement or learning, with the action.' },
+  { when: 'Monthly', t: 'Program dashboard', d: 'Active classrooms, engagement efficiency, adoption and reach by cluster.' },
+  { when: 'Quarterly', t: 'Board review pack', d: 'Outcome summary, mastery gains, beneficiary stories and corrections.' },
+  { when: 'Annually', t: 'Impact report', d: 'Year-on-year outcomes and cost per learning gain for CSR disclosure.' }
+];
+
+const BUDGET_LABELS = ['Infrastructure & devices', 'AI personas & learning apps', 'Teacher enablement', 'Monitoring & reporting', 'Implementation support'];
+const uniq = (arr, key) => { const m = new Map(); arr.forEach(x => { const k = key ? key(x) : x; if (!m.has(k)) m.set(k, x); }); return [...m.values()]; };
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let saved = null;
+    try { saved = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    this.state = { f: { ...DEFAULTS, ...(saved && saved.f) }, generated: !!(saved && saved.generated), copied: false };
+    this.reportRef = React.createRef();
+    this.set = {};
+    Object.keys(DEFAULTS).forEach(k => {
+      if (Array.isArray(DEFAULTS[k])) return;
+      this.set[k] = e => this.upd(k, typeof DEFAULTS[k] === 'number' ? (e.target.value === '' ? '' : Number(e.target.value)) : e.target.value);
+    });
+  }
+  componentDidUpdate() { try { localStorage.setItem(KEY, JSON.stringify({ f: this.state.f, generated: this.state.generated })); } catch (e) {} }
+  upd(k, v) { this.setState(s => ({ f: { ...s.f, [k]: v } })); }
+  toggle(k, id, keepOne) {
+    this.setState(s => { const a = s.f[k]; let n = a.includes(id) ? a.filter(x => x !== id) : [...a, id]; if (keepOne && !n.length) n = a; return { f: { ...s.f, [k]: n } }; });
+  }
+  scrollToReport() { setTimeout(() => { const el = this.reportRef.current; if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 68, behavior: 'smooth' }); }, 60); }
+
+  renderVals() {
+    const f = this.state.f;
+    const keys = (f.objectives && f.objectives.length ? f.objectives : ['digital']).filter(k => OBJ[k]);
+    const items = keys.map(k => OBJ[k]);
+    const num = (v, d) => (Number(v) > 0 ? Number(v) : d);
+    const budget = num(f.budget, 1), dur = num(f.duration, 12), schools = num(f.schools, 1), spp = num(f.spp, 1);
+    const students = schools * spp, years = dur / 12;
+    const inr = n => '₹' + Math.round(n).toLocaleString('en-IN');
+    const fill = s => s.replace(/__LANG__/g, f.language || 'the local language').replace(/__BOARD__/g, f.board || 'the curriculum').replace(/__SCHOOLS__/g, schools.toLocaleString('en-IN'));
+    const list = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+
+    const objectives = Object.keys(OBJ).map(k => {
+      const on = keys.includes(k);
+      return { title: OBJ[k].title, short: OBJ[k].short, mark: on ? 'Selected' : 'Select', onPick: () => this.toggle('objectives', k, true), bg: on ? 'var(--color-canvas)' : 'var(--color-surface-soft)', border: on ? '2px solid var(--color-primary)' : '2px solid transparent', eyebrow: on ? 'var(--color-primary)' : 'var(--color-muted)', box: on ? '1px solid var(--color-primary)' : '1px solid var(--color-muted-soft)', boxBg: on ? 'var(--color-primary)' : 'transparent' };
+    });
+    const chip = on => ({ bg: on ? 'var(--color-ink)' : 'var(--color-canvas)', color: on ? '#ffffff' : 'var(--color-ink)', line: on ? 'var(--color-ink)' : 'var(--color-hairline)' });
+    const focusChips = FOCUS.map(([id, label]) => ({ label, onToggle: () => this.toggle('focus', id), ...chip(f.focus.includes(id)) }));
+    const priorityChips = Object.keys(KPI).map(id => ({ label: KPI[id].label, onToggle: () => this.toggle('priorities', id), ...chip(f.priorities.includes(id)) }));
+
+    const focusSel = FOCUS.filter(x => f.focus.includes(x[0]));
+    const succSel = f.priorities.filter(p => KPI[p]);
+    const titles = items.map(x => x.title);
+
+    const missionText = items.map(x => x.snapshot).join(' ') + (focusSel.length ? ` The design specifically addresses ${list(focusSel.map(x => x[1].toLowerCase()))}.` : '');
+    const highlights = uniq(items.flatMap(x => x.highlights)).slice(0, 6);
+    const personas = items.map(x => ({ name: x.agent, desc: x.agentDesc }));
+
+    const mandate = items.map(o => ({ kind: 'Objective', area: o.title, req: o.short, resp: o.snapshot, via: o.solutions.filter(s => s !== 'training' && s !== 'monitoring').map(s => SOL[s].title).join(' · ') }))
+      .concat(focusSel.map(x => ({ kind: 'Focus area', area: x[1], req: x[2], resp: fill(x[3]), via: x[4] })))
+      .concat([{ kind: 'Assurance', area: 'Proof of impact', req: 'Evidence beyond installation and screen time', resp: 'Four-level measurement from deployment to concept-level learning gain, with Sentinel classroom evidence and a CSR Impact AI Agent.', via: 'Sentinel · CSR Impact AI Agent' }]);
+
+    const showcase = uniq(items.map(o => o.visual), v => v.img).map(v => ({ ...v, caption: fill(v.caption), points: v.points.map(fill) }));
+
+    const solKeys = uniq(items.flatMap(x => x.solutions));
+    ['monitoring', 'impactAgent'].forEach(k => { if (!solKeys.includes(k)) solKeys.push(k); });
+    const solutions = solKeys.map((k, i) => ({ ...SOL[k], n: String(i + 1).padStart(2, '0') }));
+
+    const merged = uniq(items.flatMap(x => x.steps), s => s[0]).slice(0, 6);
+    const n = merged.length;
+    const steps = merged.map((s, i) => { const a = Math.round(i * dur / n) + 1, b = Math.max(a, Math.round((i + 1) * dur / n)); return { n: String(i + 1).padStart(2, '0'), t: s[0], d: s[1], months: a === b ? `Month ${a}` : `Month ${a}–${b}` }; });
+
+    const ladder = LADDER.map(l => ({ ...l, tag: l.typical ? 'Typical + Cybernetyx' : 'Cybernetyx only', tagBg: l.typical ? '#2a2d33' : 'var(--color-primary)' }));
+    const kpis = [ACTIVE].concat(succSel.map(p => KPI[p]));
+    const trackedNames = uniq(succSel.map(p => KPI[p].track).concat(items.flatMap(x => x.outcomes))).slice(0, 6);
+    const tracked = trackedNames.map(t => ({ t, d: TRACK[t] }));
+    const supports = uniq(items.flatMap(x => x.support), s => s[0]).slice(0, 6).map(s => ({ t: s[0], d: s[1] }));
+
+    const ink = 'var(--color-ink)', up = 'var(--color-up)', down = 'var(--color-down)';
+    const reg = f.region || 'Region';
+    const mockRows = [
+      ['Cluster A', '18.5 h', '78%', '31', '+17 pts', 'On track', ink, up, up],
+      ['Cluster B', '22.0 h', '31%', '6', '+2 pts', 'Usage without learning', down, down, down],
+      ['Cluster C', '12.0 h', '72%', '27', '+14 pts', 'On track', ink, up, up],
+      ['Cluster D', '6.5 h', '69%', '22', '+8 pts', 'Needs teacher support', ink, ink, ink],
+      ['Cluster E', '15.0 h', '74%', '29', '+19 pts', 'On track', ink, up, up]
+    ].map(r => ({ name: `${reg} · ${r[0]}`, time: r[1], eff: r[2], inter: r[3], gain: r[4], signal: r[5], effColor: r[6], gainColor: r[7], sigColor: r[8] }));
+
+    const compare = COMPARE.map(([cap, note, typ, cx]) => ({ cap, note, typ, cx, typColor: typ === 'No' ? 'var(--color-muted)' : 'var(--color-ink)' }));
+
+    const avg = [0, 0, 0, 0, 0];
+    items.forEach(x => x.budget.forEach((v, i) => { avg[i] += v; }));
+    for (let i = 0; i < 5; i++) avg[i] = Math.round(avg[i] / items.length);
+    avg[0] += 100 - avg.reduce((a, b) => a + b, 0);
+    const max = Math.max(...avg);
+    const budgetRows = BUDGET_LABELS.map((label, i) => ({ label, pct: avg[i] + '%', amt: '₹' + (budget * avg[i] / 100).toLocaleString('en-IN', { maximumFractionDigits: 2 }) + ' Cr', width: (avg[i] / max * 100) + '%', fill: i === 3 ? 'var(--color-primary)' : 'var(--color-ink)' }));
+    const budgetLabel = '₹' + budget.toLocaleString('en-IN', { maximumFractionDigits: 2 }) + ' Cr';
+    const cpsy = inr(budget * 1e7 / students / years);
+
+    const org = f.org || 'Your organisation';
+    const boardText = `${org}’s ${f.program || 'program'} is designed around ${list(titles)}. It reaches about ${students.toLocaleString('en-IN')} students in ${schools.toLocaleString('en-IN')} schools across ${f.region || 'the selected region'} over ${dur} months${focusSel.length ? `, addressing ${list(focusSel.map(x => x[1].toLowerCase()))}` : ''}. Success will be reviewed through ${succSel.length ? list(succSel.map(p => KPI[p].label.toLowerCase())) : 'adoption, engagement and delivery metrics'}, with Sentinel evidence and the CSR Impact AI Agent keeping every decision grounded in classroom data.`;
+
+    const summaryText = `${f.program} — prepared for ${org}\n${[f.region, f.board, f.language].filter(Boolean).join(' · ')}\n\n${boardText}`;
+
+    return {
+      f, set: this.set, objectives, focusChips, priorityChips,
+      generated: this.state.generated, reportRef: this.reportRef,
+      selTitles: titles,
+      coverSub: items.length === 1 ? items[0].snapshot : `A ${items.length}-objective program combining ${list(titles.map(t => t.toLowerCase()))}.`,
+      coverMeta: [f.region, f.board, f.language, f.grades].filter(Boolean).join(' · '),
+      coverImg: { src: showcase[0].img, pos: showcase[0].pos },
+      coverKpis: kpis.slice(0, 4),
+      coverMetrics: [{ v: budgetLabel, k: 'Program budget' }, { v: dur + ' mo', k: 'Duration' }, { v: schools.toLocaleString('en-IN'), k: 'Schools / classrooms' }, { v: students.toLocaleString('en-IN'), k: 'Students reached' }, { v: cpsy, k: 'Per student, per year' }],
+      missionText, highlights, personas, personaLabel: personas.length > 1 ? `${personas.length} AI personas for this program` : 'AI persona for this program',
+      mandate, successLabels: succSel.map(p => KPI[p].label),
+      showcase, feature: showcase[0], showFeature: showcase.length === 1, showGrid: showcase.length > 1,
+      solutions, solCount: solutions.length, steps, stepCount: steps.length,
+      ladder, kpis, tracked, supports, mockRows, compare, cadence: CADENCE,
+      sentinel: SENTINEL, evidence: EVIDENCE, asks: ASKS, agentGets: GETS,
+      budgetRows, budgetLabel, cpsy, studentsLabel: students.toLocaleString('en-IN'),
+      boardText, hasNotes: !!(f.notes && f.notes.trim()),
+      today: new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }),
+      showMock: this.props.showMock ?? true, showBudget: this.props.showBudget ?? true,
+      copyLabel: this.state.copied ? 'Copied' : 'Copy summary',
+      copySummary: () => { try { navigator.clipboard.writeText(summaryText); } catch (e) {} this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 1600); },
+      generate: () => { this.setState({ generated: true }); this.scrollToReport(); },
+      goReport: e => { if (!this.state.generated) { e.preventDefault(); this.setState({ generated: true }); this.scrollToReport(); } },
+      reset: () => this.setState({ f: { ...DEFAULTS }, generated: false }),
+      goTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      downloadPdf: () => {
+        const run = () => { const t = document.title; document.title = `${org} — Cybernetyx CSR Proposal`; window.print(); setTimeout(() => { document.title = t; }, 500); };
+        if (!this.state.generated) this.setState({ generated: true }, () => setTimeout(run, 500)); else run();
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

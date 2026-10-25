@@ -1,0 +1,14 @@
+/* ============================================================
+   RADIUS — Coinbase. Pill for interactive, 24px for containers,
+   full circle for icons. Sharp corners absent.
+   ============================================================ */
+:root {
+  --radius-none: 0px;     /* reserved — essentially unused */
+  --radius-xs:   4px;     /* inline tags */
+  --radius-sm:   8px;     /* compact rows */
+  --radius-md:   12px;    /* form inputs */
+  --radius-lg:   16px;    /* mid-size cards */
+  --radius-xl:   24px;    /* feature cards, product-UI mockups, pricing tiers */
+  --radius-pill: 100px;   /* all CTA buttons, search pills, badges */
+  --radius-full: 9999px;  /* asset icon circles, avatars */
+}

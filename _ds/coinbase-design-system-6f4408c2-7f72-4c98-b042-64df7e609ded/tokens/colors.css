@@ -1,0 +1,46 @@
+/* ============================================================
+   COLORS — Coinbase. Single accent: Coinbase Blue (#0052ff), used scarcely.
+   Trading green/red are SEMANTIC (text color only), never button fills.
+   ============================================================ */
+:root {
+  /* --- Brand & Accent --- */
+  --color-primary:           #0052ff; /* Coinbase Blue — every primary CTA, wordmark, brand link */
+  --color-primary-active:    #003ecc; /* press-state darken */
+  --color-primary-disabled:  #a8b8cc; /* faded-blue disabled CTA */
+  --color-accent-yellow:     #f4b000; /* illustrative-only — BTC/asset glyph fills, NOT an action color */
+
+  /* --- Surface --- */
+  --color-canvas:               #ffffff; /* default page floor */
+  --color-surface-soft:         #f7f7f7; /* subtle alternating band */
+  --color-surface-strong:       #eef0f3; /* secondary buttons, search pills, asset plates */
+  --color-surface-dark:         #0a0b0d; /* full-bleed dark heroes & CTA bands */
+  --color-surface-dark-elevated:#16181c; /* floating product-UI mockup cards on dark */
+
+  /* --- Hairlines --- */
+  --color-hairline:      #dee1e6; /* default 1px divider on white */
+  --color-hairline-soft: #eef0f3; /* lighter divider (== surface-strong) */
+
+  /* --- Text --- */
+  --color-ink:           #0a0b0d; /* display headings, nav, body emphasis */
+  --color-body:          #5b616e; /* default running text — cool gray */
+  --color-body-strong:   #0a0b0d; /* stronger emphasis (== ink) */
+  --color-muted:         #7c828a; /* sub-titles, breadcrumbs, footer secondary */
+  --color-muted-soft:    #a8acb3; /* disabled link text */
+  --color-on-primary:    #ffffff; /* text on Coinbase Blue CTAs */
+  --color-on-dark:       #ffffff; /* text on dark heroes */
+  --color-on-dark-soft:  #a8acb3; /* muted off-white on dark */
+
+  /* --- Trading semantics (TEXT COLOR ONLY) --- */
+  --color-up:   #05b169; /* price up */
+  --color-down: #cf202f; /* price down */
+
+  /* --- Semantic aliases --- */
+  --text-heading:    var(--color-ink);
+  --text-body:       var(--color-body);
+  --text-muted:      var(--color-muted);
+  --text-link:       var(--color-primary);
+  --surface-page:    var(--color-canvas);
+  --surface-band:    var(--color-surface-soft);
+  --surface-plate:   var(--color-surface-strong);
+  --border-default:  var(--color-hairline);
+}

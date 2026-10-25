@@ -1,0 +1,17 @@
+/* ============================================================
+   SPACING — Coinbase. Base unit 4px. 96px section rhythm.
+   ============================================================ */
+:root {
+  --space-xxs:     4px;
+  --space-xs:      8px;
+  --space-sm:      12px;
+  --space-base:    16px;
+  --space-md:      20px;
+  --space-lg:      24px;  /* gap between cards inside a band */
+  --space-xl:      32px;  /* card internal padding */
+  --space-xxl:     48px;
+  --space-section: 96px;  /* vertical padding for every editorial band */
+
+  /* Layout */
+  --container-max: 1200px;
+}

@@ -1,0 +1,32 @@
+/* ============================================================
+   TYPOGRAPHY — Coinbase. Display stays at weight 400 (institutional calm).
+   Negative tracking on display only. Mono on every number.
+   ============================================================ */
+:root {
+  /* Display (CoinbaseDisplay, weight 400, negative tracking) */
+  --type-display-mega-size: 80px; --type-display-mega-weight: 400; --type-display-mega-lh: 1.0;  --type-display-mega-ls: -2px;
+  --type-display-xl-size:   64px; --type-display-xl-weight:   400; --type-display-xl-lh:   1.0;  --type-display-xl-ls:   -1.6px;
+  --type-display-lg-size:   52px; --type-display-lg-weight:   400; --type-display-lg-lh:   1.0;  --type-display-lg-ls:   -1.3px;
+  --type-display-md-size:   44px; --type-display-md-weight:   400; --type-display-md-lh:   1.09; --type-display-md-ls:   -1px;
+  --type-display-sm-size:   36px; --type-display-sm-weight:   400; --type-display-sm-lh:   1.11; --type-display-sm-ls:   -0.5px;
+
+  /* Titles (CoinbaseSans) */
+  --type-title-lg-size: 32px; --type-title-lg-weight: 400; --type-title-lg-lh: 1.13; --type-title-lg-ls: -0.4px;
+  --type-title-md-size: 18px; --type-title-md-weight: 600; --type-title-md-lh: 1.33; --type-title-md-ls: 0;
+  --type-title-sm-size: 16px; --type-title-sm-weight: 600; --type-title-sm-lh: 1.25; --type-title-sm-ls: 0;
+
+  /* Body (CoinbaseSans) */
+  --type-body-md-size:     16px; --type-body-md-weight:     400; --type-body-md-lh:     1.5;
+  --type-body-strong-size: 16px; --type-body-strong-weight: 700; --type-body-strong-lh: 1.5;
+  --type-body-sm-size:     14px; --type-body-sm-weight:     400; --type-body-sm-lh:     1.5;
+
+  --type-caption-size:        13px; --type-caption-weight:        400; --type-caption-lh:        1.5;
+  --type-caption-strong-size: 12px; --type-caption-strong-weight: 600; --type-caption-strong-lh: 1.5;
+
+  /* Numerics (CoinbaseMono) */
+  --type-number-size: 18px; --type-number-weight: 500; --type-number-lh: 1.4;
+
+  /* Interactive */
+  --type-button-size:   16px; --type-button-weight:   600; --type-button-lh:   1.15;
+  --type-nav-link-size: 14px; --type-nav-link-weight: 500; --type-nav-link-lh: 1.4;
+}

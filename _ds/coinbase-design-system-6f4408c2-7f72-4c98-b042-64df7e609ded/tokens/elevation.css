@@ -1,0 +1,7 @@
+/* ============================================================
+   ELEVATION — Coinbase. ONE shadow tier only. 80% of surfaces flat.
+   ============================================================ */
+:root {
+  --shadow-none: none;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.04); /* the single shadow tier — hovered cards */
+}
